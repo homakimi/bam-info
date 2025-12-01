@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_分離模式" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 79 108">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: #f99;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M39.5,1C18.2,1,1,18.2,1,39.5s38.5,67.6,38.5,67.6c0,0,38.5-38.8,38.5-67.6S60.8,1,39.5,1Z"/>
+  <circle class="st0" cx="39.5" cy="39.5" r="31"/>
+</svg>

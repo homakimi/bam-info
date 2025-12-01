@@ -1,3 +1,0 @@
-<FilesMatch "\.(ttc|ttf|otf|eot|woff|woff2|svg)$">
-    Header set Access-Control-Allow-Origin "*"
-</FilesMatch>

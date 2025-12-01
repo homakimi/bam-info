@@ -10,629 +10,390 @@
         <script type="text/javascript" src="js/main.js"></script>
 
         <style>
-            .bg-words {
-                background: url('img/bam-habit-word-bg.png') no-repeat center center;
-                background-size: 100% 100%;
-            }
-            .bg-words-blue {
-                background: url('img/bam-habit-word-bg-blue.png') no-repeat center center;
-                background-size: 100% 100%;
-            }
-            .notice article::after {
-                background: url('img/bam-habit-dot.png') repeat center center;
-                background-size: 1vw 1vw;
-            }
-            .invest-a.yellow {
-                background: url('img/bam-habit-invest-book-yellow.png') no-repeat center center;
-                background-size: contain;
-            }
-            .invest-a.blue {
-                background: url('img/bam-habit-invest-book-blue.png') no-repeat center center;
-                background-size: contain;
-            }
-            .invest-a.wait {
-                background: url('img/bam-habit-invest-book-wait.png') no-repeat center center;
-                background-size: contain;
+            .bam-info-bg {
+                background: url('img/bam-info-bg.jpg');
             }
             @media only screen and (max-width: 1024px) {
-                .notice article::after {
-                    background-size: 2.5vw 2.5vw;
-                }
             }
         </style>
     </head>
     <body>
-        <div class="bam-habit-wrap">
-            <section class="kv">
-                <a class="kv-a-1 for-pc" data-go="intro" href=""><img class="fullimg" src="img/bam-habit-kv-1.png"></a>
-                <img class="kv-block fullimg for-pc" src="img/bam-habit-kv-block.png">
-                <img class="kv-title fullimg for-pc" src="img/bam-habit-kv-title.png">
-                <a class="kv-a-2 for-pc" data-go="info" href=""><img class="fullimg" src="img/bam-habit-kv-2.png"></a>
-                <a class="kv-a-3 for-pc" data-go="invest" href=""><img class="fullimg" src="img/bam-habit-kv-3.png"></a>
-                <a class="kv-a-4 for-pc" data-go="tutorial" href=""><img class="fullimg" src="img/bam-habit-kv-4.png"></a>
-                
-                <a class="kv-a-1 for-m" data-go="intro" href=""><img class="fullimg" src="img/bam-habit-kv-1-m.png"></a>
-                <img class="kv-block fullimg for-m" src="img/bam-habit-kv-block-m.png">
-                <img class="kv-title fullimg for-m" src="img/bam-habit-kv-title-m.png">
-                <a class="kv-a-2 for-m" data-go="info" href=""><img class="fullimg" src="img/bam-habit-kv-2-m.png"></a>
-                <a class="kv-a-3 for-m" data-go="invest" href=""><img class="fullimg" src="img/bam-habit-kv-3-m.png"></a>
-                <a class="kv-a-4 for-m" data-go="tutorial" href=""><img class="fullimg" src="img/bam-habit-kv-4-m.png"></a>
-                <a class="kv-a-5 kv-vid" href=""><img class="fullimg" src="img/bam-habit-vid-btn.png"></a>
-            </section>
+        <div class="bam-info-wrap">
+            <div class="bam-info-short">
+                <div class="bam-info-bg">
+                    <div class="bam-info-title">
+                        <img class="fullimg" src="img/bam-info-title.png" alt="長照、失智服務導航">
+                        <img class="kv-ppl" src="img/bam-info-kv-ppl.png">
+                    </div>
+                    <a class="bam-info-title-1" href=""><img class="fullimg" src="img/bam-info-t-1.png" alt="失智服務導航指引"></a>
+                    <a class="bam-info-title-2" href=""><img class="fullimg" src="img/bam-info-t-2.png" alt="長照服務導航指引"></a>
+                    <a class="bam-info-say-1" href="">
+                        <img class="fullimg" src="img/bam-info-say-1.png">
+                        <p>健康守護圈合作夥伴攜手打造「失智服務導航」，從健康期到失智症早期與中晚期，串連各階段資源，守護每一段生命旅程。</p>
+                        <span>看更多</span>
+                    </a>
+                    <a class="bam-info-say-2" href="">
+                        <img class="fullimg" src="img/bam-info-say-2.png">
+                        <p>健康守護圈合作夥伴攜手打造「長照服務導航」，陪伴民眾從健康到失能各階段，提供貼心而完善的照護支持，讓每段旅程都不孤單。</p>
+                        <span>看更多</span>
+                    </a>
+                    <img class="bam-info-house-1" src="img/bam-info-h-1.png">
+                    <img class="bam-info-house-2" src="img/bam-info-h-2.png">
 
-            <section class="intro" data-scroll-show-parent data-pin="intro">
-                <div class="intro-flex">
-                    <div class="intro-left">
-                        <h2 class="title">什麼是生活習慣病？</h2>
-                        <article class="for-pc">生活習慣病概念源自日本，西元1996年日本官方將大家所認知的成人疾病或慢性病，正名為生活習慣病。包含國人最擔心得到的癌症或是心血管疾病、糖尿病及其他慢性疾病。</article>
-                        <div class="intro-people">
-                            <img class="fullimg" src="img/bam-habit-intro-people.png">
-                            <div class="intro-block" data-scroll-show>
-                                <img class="fullimg" src="img/bam-habit-intro-block.png">
-                                <p>生活習慣病危害國人<br>健康，不可輕忽</p>
-                            </div>
+                    <!-- content -->
+                    <div class="bam-info-content-blue" style="display: none;">
+                        <div class="info-block-video">
+                            <img class="fullimg" src="img/bam-info-stand-video.png">
                         </div>
-                    </div>
-                    <div class="intro-right">
-                        <article class="for-m">生活習慣病概念源自日本，西元1996年日本官方將大家所認知的成人疾病或慢性病，正名為生活習慣病。包含國人最擔心得到的癌症或是心血管疾病、糖尿病及其他慢性疾病。</article>
-                        <div class="intro-tab-swiper">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide">Level 1<br>NG習慣</a>
-                                    <a href="" class="swiper-slide">Level 2<br>亞健康</a>
-                                    <a href="" class="swiper-slide">Level 3<br>疾病</a>
-                                    <a href="" class="swiper-slide">Level 4<br>嚴重併發症</a>
-                                    <a href="" class="swiper-slide">Level 5<br>失能/死亡</a>
-                                </div>
+                        <div class="info-block-1">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>健康期</h3>
+                                    <p>從日常開始，及早守護大腦健康</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
                             </div>
-                            <div class="swiper-button swiper-button-prev for-m"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                            <div class="swiper-button swiper-button-next for-m"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                        </div>
-                        <div class="intro-swiper">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <article><p>缺乏運動</p><p>不良飲食</p><p>作息不佳</p><p>過度壓力</p></article>
-                                        <div class="intro-img-block" style="background: #ffebeb;"><img src="img/bam-habit-level-1.png"></div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <article><p>高血糖</p><p>高血脂</p><p>高血壓</p><p>BMI異常</p><p>肥胖</p></article>
-                                        <div class="intro-img-block" style="background: #f7cdce;"><img src="img/bam-habit-level-2.png"></div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <article><p>糖尿病</p><p>心血管疾病</p></article>
-                                        <div class="intro-img-block" style="background: #f5bfc0;"><img src="img/bam-habit-level-3.png"></div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <article><p>心肌梗塞</p><p>腦中風</p></article>
-                                        <div class="intro-img-block" style="background: #f29b9c;"><img src="img/bam-habit-level-4.png"></div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <article><p>生活不能自理</p><p>死亡</p></article>
-                                        <div class="intro-img-block" style="background: #f3797a;"><img src="img/bam-habit-level-5.png"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button swiper-button-prev for-pc"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                            <div class="swiper-button swiper-button-next for-pc"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="info" data-pin="info">
-                <div class="info-flex">
-                    <div class="info-left">
-                        <h2 class="title">不良生活習慣</h2>
-                        <p class="bg-words for-pc">我覺得我最難改的NG習慣是哪一個？</p>
-                        <p class="bg-words for-m">我覺得我最難改的</p>
-                        <br class="for-m">
-                        <p class="bg-words for-m"><img src="img/bam-habit-title-deco-1.png"><img src="img/bam-habit-title-deco-2.png">NG習慣是哪一個?</p>
-                        <img class="for-pc" src="img/bam-habit-q-people.png">
-                        <img class="for-m" src="img/bam-habit-q-people-m.png">
-                    </div>
-                    <div class="info-right" data-scroll-show>
-                        <a href="" data-card="1"><img class="habit-card-back fullimg" src="img/bam-habit-q-1.png"><img class="habit-card fullimg" src="img/bam-habit-q-1-card.png">常熬夜</a>
-                        <a href="" data-card="2"><img class="habit-card-back fullimg" src="img/bam-habit-q-2.png"><img class="habit-card fullimg" src="img/bam-habit-q-2-card.png">吃宵夜</a>
-                        <a href="" data-card="3"><img class="habit-card-back fullimg" src="img/bam-habit-q-3.png"><img class="habit-card fullimg" src="img/bam-habit-q-3-card.png">不運動</a>
-                        <a href="" data-card="4"><img class="habit-card-back fullimg" src="img/bam-habit-q-4.png"><img class="habit-card fullimg" src="img/bam-habit-q-4-card.png">常久坐</a>
-                        <a href="" data-card="5"><img class="habit-card-back fullimg" src="img/bam-habit-q-5.png"><img class="habit-card fullimg" src="img/bam-habit-q-5-card.png">少蔬果</a>
-                        <a href="" data-card="6"><img class="habit-card-back fullimg" src="img/bam-habit-q-6.png"><img class="habit-card fullimg" src="img/bam-habit-q-6-card.png">少喝水</a>
-                        <a href="" data-card="7"><img class="habit-card-back fullimg" src="img/bam-habit-q-7.png"><img class="habit-card fullimg" src="img/bam-habit-q-7-card.png">愛甜食</a>
-                        <a href="" data-card="8"><img class="habit-card-back fullimg" src="img/bam-habit-q-8.png"><img class="habit-card fullimg" src="img/bam-habit-q-8-card.png">抽煙喝酒</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="invest" data-pin="invest" data-scroll-show-parent>
-                <div class="invest-flex">
-                    <h2 class="title">調查<br class="for-pc">數據大公開</h2>
-                    <div class="invest-main for-pc" data-scroll-show>
-                        <img class="fullimg" src="img/bam-habit-invest-bg.png">
-                        <div class="invest-a-block">
-                            <a class="invest-a yellow" href="" data-invest="1">
-                                <h4>敬請期待</h4>
-                                <h3>運動習慣</h3>
-                                <article>缺乏運動<br>又坐得久</article>
+                            <a class="info-a-block" style="top: 27.5%; left: 49.5%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>運動益腦</h4>
+                                <article>
+                                    <img style="width: 50%;" src="img/bam-info-logo-blue-1-1.jpg">
+                                    <p>維持肌力與心肺力，守護自主生活，遠離失能</p>
+                                </article>
                             </a>
-                            <a class="invest-a blue" href="" data-invest="2">
-                                <h4>敬請期待</h4>
-                                <h3>飲食習慣</h3>
-                                <article>吃三餐及宵夜<br>的習慣</article>
+                            <a class="info-a-block" style="top: 31.5%; left: 64%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>基因檢測</h4>
+                                <article>
+                                    <img style="width: 35%;" src="img/bam-info-logo-blue-1-2.jpg">
+                                    <p>了解自己是否帶有失智症基因，提早預防</p>
+                                </article>
                             </a>
-                            <a class="invest-a blue" href="" data-invest="3">
-                                <h4>敬請期待</h4>
-                                <h3>飲食習慣</h3>
-                                <article>甜食、含糖飲<br>料已成為日常</article>
+                            <a class="info-a-block" style="top: 29.9%; left: 41%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>健康量測</h4>
+                                <article>
+                                    <img style="width: 50%;" src="img/bam-info-logo-blue-1-3.jpg">
+                                    <p>量測血氧、血糖等指標，關注身體健康</p>
+                                </article>
                             </a>
-                            <a class="invest-a blue" href="" data-invest="4">
-                                <h4>敬請期待</h4>
-                                <h3>睡眠習慣</h3>
-                                <article>晚睡又睡不飽</article>
+                            <a class="info-a-block" style="top: 35%; left: 49.5%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>健康量測</h4>
+                                <article>
+                                    <img style="width: 20%;" src="img/bam-info-logo-blue-1-4.jpg">
+                                    <p>量測五種生理數值，幫您顧健康</p>
+                                </article>
                             </a>
-                            <a class="invest-a blue" href="" data-invest="5">
-                                <h4>敬請期待</h4>
-                                <h3>睡眠習慣</h3>
-                                <article>國人有<br>失眠的困擾</article>
+                            <a class="info-a-block" style="top: 32.5%; left: 33.5%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>聽力睡眠</h4>
+                                <article>
+                                    <img style="width: 75%;" src="img/bam-info-logo-blue-1-5.jpg">
+                                    <p>聽力、睡眠檢測預防失智</p>
+                                </article>
                             </a>
-                            <a class="invest-a yellow" href="" data-invest="6">
-                                <h4>敬請期待</h4>
-                                <h3>NG習慣</h3>
-                                <article>從生活NG習慣<br>看健康信心</article>
-                            </a>
-                            <a class="invest-a yellow" href="" data-invest="7">
-                                <h4>敬請期待</h4>
-                                <h3>NG習慣</h3>
-                                <article>沒做健檢的<br>人NG習慣<br>比例較高</article>
-                            </a>
-                            <a class="invest-a blue" href="" data-invest="8">
-                                <h4>敬請期待</h4>
-                                <h3>健康風險<br>疾病排行榜</h3>
-                            </a>
-                            <a class="invest-a yellow" href="" data-invest="9">
-                                <h4>敬請期待</h4>
-                                <h3>生重病<br>不敢休息的<br>國人比例</h3>
-                            </a>
-                            <a class="invest-a blue" href="" data-invest="10">
-                                <h4>敬請期待</h4>
-                                <h3>為促進健康<br>每月願意<br>花費的金額</h3>
-                            </a>
-                            <a class="invest-a yellow" href="" data-invest="11">
-                                <h4>敬請期待</h4>
-                                <h3>醫療需求及<br>保險缺口</h3>
-                            </a>
-                            <a class="invest-a blue" href="" data-invest="12">
-                                <h4>敬請期待</h4>
-                                <h3>願意購買<br>保險的<br>時機點</h3>
+                            <a class="info-a-block" style="top: 38%; left: 61%" href="">
+                                <img src="img/bam-info-tag-blue-1.svg">
+                                <h4>認知訓練</h4>
+                                <article>
+                                    <img style="width: 35%;" src="img/bam-info-logo-blue-1-6.jpg">
+                                    <p>以益智健腦遊戲訓練長輩協助一同對抗失智</p>
+                                </article>
                             </a>
                         </div>
-                        <img class="invest-front fullimg" src="img/bam-habit-invest-front.png">
-                    </div>
-
-                    <div class="invest-main for-m">
-                        <img class="fullimg" src="img/bam-habit-invest-bg-m.png">
-                        <div class="invest-swiper" data-scroll-show>
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="invest-a-block">
-                                            <a class="invest-a yellow" href="" data-invest="1">
-                                                <h4>敬請期待</h4>
-                                                <h3>運動習慣</h3>
-                                                <article>缺乏運動<br>又坐得久</article>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="2">
-                                                <h4>敬請期待</h4>
-                                                <h3>飲食習慣</h3>
-                                                <article>吃三餐及宵夜<br>的習慣</article>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="3">
-                                                <h4>敬請期待</h4>
-                                                <h3>飲食習慣</h3>
-                                                <article>甜食、含糖飲<br>料已成為日常</article>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="4">
-                                                <h4>敬請期待</h4>
-                                                <h3>睡眠習慣</h3>
-                                                <article>晚睡又睡不飽</article>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="5">
-                                                <h4>敬請期待</h4>
-                                                <h3>睡眠習慣</h3>
-                                                <article>國人有<br>失眠的困擾</article>
-                                            </a>
-                                            <a class="invest-a yellow" href="" data-invest="6">
-                                                <h4>敬請期待</h4>
-                                                <h3>NG習慣</h3>
-                                                <article>從生活NG習慣<br>看健康信心</article>
-                                            </a>
-                                        </div>
-                                        <img class="invest-front" src="img/bam-habit-invest-front-m.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="invest-a-block">
-                                            <a class="invest-a yellow" href="" data-invest="7">
-                                                <h4>敬請期待</h4>
-                                                <h3>NG習慣</h3>
-                                                <article>沒做健檢的<br>人NG習慣<br>比例較高</article>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="8">
-                                                <h4>敬請期待</h4>
-                                                <h3>健康風險<br>疾病排行榜</h3>
-                                            </a>
-                                            <a class="invest-a yellow" href="" data-invest="9">
-                                                <h4>敬請期待</h4>
-                                                <h3>生重病<br>不敢休息的<br>國人比例</h3>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="10">
-                                                <h4>敬請期待</h4>
-                                                <h3>為促進健康<br>每月願意<br>花費的金額</h3>
-                                            </a>
-                                            <a class="invest-a yellow" href="" data-invest="11">
-                                                <h4>敬請期待</h4>
-                                                <h3>醫療需求及<br>保險缺口</h3>
-                                            </a>
-                                            <a class="invest-a blue" href="" data-invest="12">
-                                                <h4>敬請期待</h4>
-                                                <h3>願意購買<br>保險的<br>時機點</h3>
-                                            </a>
-                                        </div>
-                                        <img class="invest-front" src="img/bam-habit-invest-front-m.png">
-                                    </div>
-                                </div>
+                        <div class="info-block-2">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>失智症早期</h3>
+                                    <p>症狀輕微，常常被忽略而延誤就診</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
                             </div>
-                            <div class="swiper-button-block">
-                                <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="invest-talk">
-                        <img class="fullimg" src="img/bam-habit-invest-deco.png">
-                        <div class="invest-block" data-scroll-show="500">
-                            <img class="fullimg" src="img/bam-habit-invest-block.png">
-                            <p>精選12大數據<br>帶您了解國人生活習慣</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="ng">
-                <h2 class="title" style="text-align: center;">這些<img style="display: inline-block; width: 2em; transform: translateY(20%); margin: 0 0.2em; vertical-align: inherit;" src="img/bam-habit-ng.png">行為 你做了幾項？</h2>
-                <div data-scroll-show class="ng-top">
-                    <div class="ng-top-flex">
-                        <a class="ng-a-top active" href="">
-                            <img class="ng-img" src="img/bam-habit-ng-1.png">
-                            <img class="ng-img-active" src="img/bam-habit-ng-1-active.png">
-                            <p>缺乏運動</p><h3 class="bg-words">缺乏運動</h3>
-                            <img class="ng-arrow arrow-down for-m" src="img/bam-habit-arrow.png">
-                        </a>
-                        <a class="ng-a-top" href="">
-                            <img class="ng-img" src="img/bam-habit-ng-2.png">
-                            <img class="ng-img-active" src="img/bam-habit-ng-2-active.png">
-                            <p>不健康飲食</p><h3 class="bg-words">不健康飲食</h3>
-                            <img class="ng-arrow arrow-down for-m" src="img/bam-habit-arrow.png">
-                        </a>
-                        <a class="ng-a-bottom" href="">
-                            <img class="ng-img" src="img/bam-habit-ng-3.png">
-                            <img class="ng-img-active" src="img/bam-habit-ng-3-active.png">
-                            <p>不良生活作息</p><h3 class="bg-words">不良生活作息</h3>
-                            <img class="ng-arrow arrow-top for-m" src="img/bam-habit-arrow.png">
-                        </a>
-                        <a class="ng-a-bottom" href="">
-                            <img class="ng-img" src="img/bam-habit-ng-4.png">
-                            <img class="ng-img-active" src="img/bam-habit-ng-4-active.png">
-                            <p>過度壓力</p><h3 class="bg-words">過度壓力</h3>
-                            <img class="ng-arrow arrow-top for-m" src="img/bam-habit-arrow.png">
-                        </a>
-                    </div>
-                    <!-- info -->
-                    <div class="ng-top-info-wrap">
-                        <div class="ng-top-info-flex">
-                            <div class="ng-top-info-left">
-                                <img src="img/bam-habit-arrow.png">
-                                <p>不喜歡運動</p>
-                                <p>沒時間運動</p>
-                            </div>
-                            <div class="ng-top-info-right">
-                                <div class="ng-swiper">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                            <a href="https://health.nanshanlife.com.tw/主題服務/BAM活力洋溢APP" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-1.jpg">
-                                                <p>BAM－運動管理APP</p>
-                                            </a>
-                                            <a href="https://health.nanshanlife.com.tw/Search/找健康/None/喬山健康科技" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-2.jpg">
-                                                <p>喬山健康科技</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                    <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ng-top-info-flex" style="display: none;">
-                            <div class="ng-top-info-left">
-                                <img src="img/bam-habit-arrow.png">
-                                <p>喜歡甜食、油炸、高熱量食物</p>
-                                <p>喜歡鹹、醃漬物</p>
-                                <p>不愛喝水</p>
-                                <p>愛吃宵夜</p>
-                                <p>不吃蔬果</p>
-                            </div>
-                            <div class="ng-top-info-right">
-                                <div class="ng-swiper">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                            <a href="https://health.nanshanlife.com.tw/找健康/美味健力餐" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-3.jpg">
-                                                <p>桂冠營養研究室－美力健味餐</p>
-                                            </a>
-                                            <a href="https://health.nanshanlife.com.tw/Search/找健康/None/cofit" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-4.jpg">
-                                                <p>Cofit－營養健康指導</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                    <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ng-top-info-flex" style="display: none;">
-                            <div class="ng-top-info-left">
-                                <img src="img/bam-habit-arrow.png">
-                                <p>常熬夜、晚睡</p>
-                                <p>抽煙、喝酒、吃檳榔</p>
-                                <p>時常久坐</p>
-                                <p>不愛刷牙</p>
-                                <p>便秘</p>
-                            </div>
-                            <div class="ng-top-info-right">
-                                <div class="ng-swiper">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                            <a href="https://health.nanshanlife.com.tw/看健康/脂肪肝爆襲！你的「這些習慣」，都在悄悄形成脂肪肝" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <p>脂肪肝爆襲！你的「這些習慣」，都在悄悄形成脂肪肝<div class="habit-btn">前往了解</div></p>
-                                            </a>
-                                            <a href="https://health.nanshanlife.com.tw/看健康/血壓標準知多少，高血壓與低血壓會有甚麼症狀呢？" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <p>血壓標準知多少，高血壓與低血壓會有甚麼症狀呢？<div class="habit-btn">前往了解</div></p>
-                                            </a>
-                                            <a href="https://health.nanshanlife.com.tw/看健康/糖尿病年輕化！血糖高、低都危險" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <p>糖尿病年輕化！血糖高、低都危險<div class="habit-btn">前往了解</div></p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                    <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ng-top-info-flex" style="display: none;">
-                            <div class="ng-top-info-left">
-                                <img src="img/bam-habit-arrow.png">
-                                <p>累積壓力</p>
-                                <p>心情鬱悶</p>
-                            </div>
-                            <div class="ng-top-info-right">
-                                <div class="ng-swiper">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                            <a href="https://health.nanshanlife.com.tw/找健康/線上心理諮詢" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-5.jpg">
-                                                <p>Farhugs遠距抱抱－線上心理諮詢</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                    <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ng-bottom" data-scroll-show>
-                    <h2 class="title">健康問題找 <span style="color: #f26162">健康管家</span></h2>
-                    <div class="ng-bottom-flex">
-                        <div class="ng-bottom-right">
-                            <div>
-                                <img src="img/bam-habit-ng-people.png">
-                                <p class="bg-words">健康疑惑<img class="for-m" src="img/bam-habit-arrow.png"></p>
-                            </div>
-                            <article>
-                                <p>衛教諮詢</p>
-                                <p>健康協助</p>
-                                <p>自我健康管理促進</p>
-                            </article>
-                        </div>
-                        <div class="ng-bottom-left">
-                            <div class="ng-swiper">
-                                <div class="swiper">
-                                    <div class="swiper-wrapper">
-                                        <a href="https://health.nanshanlife.com.tw/找健康/健康管家服務" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                            <img src="img/bam-habit-logo-6.jpg">
-                                            <p>健康管家服務</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                                <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="tutorial" data-scroll-show-parent data-pin="tutorial">
-                <img style="opacity: 0;" class="fullimg for-pc" src="img/bam-habit-tutorial-full.jpg">
-                <img data-scroll-show class="tutorial-deco for-pc" src="img/bam-habit-tutorial.png">
-                <img data-scroll-show class="tutorial-deco for-m" src="img/bam-habit-tutorial-m.png">
-                <h3>守護圈專家教你<br>戰勝心血管疾病</h3>
-                <div class="tutorial-img for-pc">
-                    <img data-scroll-show="250" src="img/bam-habit-tutorial-1.png">
-                    <img data-scroll-show="750" src="img/bam-habit-tutorial-2.png">
-                    <img data-scroll-show="500" src="img/bam-habit-tutorial-3.png">
-                    <img data-scroll-show="1000" src="img/bam-habit-tutorial-4.png">
-                </div>
-                <div class="tutorial-href for-pc">
-                    <!-- 護心運動 -->
-                    <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】運動應量與質兼具才能有效防範疾病" target="_blank" rel="noreferrer noopener"></a>
-                    <!-- 護心醫療 -->
-                    <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】心血管疾病：隱藏的健康危機與有效的預防對策" target="_blank" rel="noreferrer noopener"></a>
-                    <!-- 護心飲食 -->
-                    <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】正確的營養攝取是遠離肥胖與心血管疾病的關鍵" target="_blank" rel="noreferrer noopener"></a>
-                    <!-- 正念護心 -->
-                    <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】專業諮詢在促進整體健康扮演重要角色" target="_blank" rel="noreferrer noopener"></a>
-                </div>
-                <div class="tutorial-swiper for-m" data-scroll-show>
-                    <div class="tutorial-dot"><p class="active"></p><p class="active"></p><p class="active"></p><p class="active"></p><p class="active"></p></div>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <!-- 護心運動 -->
-                            <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】運動應量與質兼具才能有效防範疾病" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                <img class="fullimg" src="img/bam-habit-tutorial-1-m.png">
+                            <a class="info-a-block" style="top: 45.5%; left: 39%" href="">
+                                <img src="img/bam-info-tag-blue-2.svg">
+                                <h4>失智友善</h4>
+                                <article>
+                                    <img style="width: 70%;" src="img/bam-info-logo-blue-2-1.jpg">
+                                    <p>幫助迷路的長輩找到回家的路</p>
+                                </article>
                             </a>
-                            <!-- 護心醫療 -->
-                            <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】心血管疾病：隱藏的健康危機與有效的預防對策" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                <img class="fullimg" src="img/bam-habit-tutorial-2-m.png">
+                            <a class="info-a-block" style="top: 46.5%; left: 20%" href="">
+                                <img src="img/bam-info-tag-blue-2.svg">
+                                <h4>營養加分</h4>
+                                <article>
+                                    <img style="width: 45%;" src="img/bam-info-logo-blue-2-2.jpg">
+                                    <p>提供長輩所需的蛋白質與膳食纖維，全面守護健康</p>
+                                </article>
                             </a>
-                            <!-- 正念護心 -->
-                            <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】專業諮詢在促進整體健康扮演重要角色" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                <img class="fullimg" src="img/bam-habit-tutorial-3-m.png">
-                            </a>
-                            <!-- 護心飲食 -->
-                            <a href="https://health.nanshanlife.com.tw/看健康/【名家專欄】正確的營養攝取是遠離肥胖與心血管疾病的關鍵" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                <img class="fullimg" src="img/bam-habit-tutorial-4-m.png">
+                            <a class="info-a-block" style="top: 50%; left: 26%" href="">
+                                <img src="img/bam-info-tag-blue-2.svg">
+                                <h4>照護陪伴</h4>
+                                <article>
+                                    <img style="width: 45%;" src="img/bam-info-logo-blue-2-3.jpg">
+                                    <p>教導照顧者如何照顧失智家人，面對照護不再心慌</p>
+                                </article>
                             </a>
                         </div>
-                    </div>
-                    <div class="swiper-button-block">
-                        <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                        <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="plan">
-                <div class="plan-wrap">
-                    <h2 class="title"><img data-scroll-show src="img/bam-habit-plan.png">保險保障專家教你<br class="for-m"> 提供保險規劃建議</h2>
-                    <div class="plan-flex">
-                        <div data-scroll-show>
-                            <h3 class="bg-words" data-scroll-show="500">保夠再保本</h3>
-                            <div style="background: url('img/bam-habit-plan-1.jpg');"></div>
-                            <h4>「足額」保障的重要性</h4>
-                            <p>挑選保險時不要陷入「還本」或「終身」保障等迷思。建議可先以定期險規劃所需保障。</p>
-                        </div>
-                        <div data-scroll-show>
-                            <h3 class="bg-words"data-scroll-show="500">保近再保遠</h3>
-                            <div style="background: url('img/bam-habit-plan-2.jpg');"></div>
-                            <h4>現階段可能發生的風險做保險規劃</h4>
-                            <p>先著眼於人生現階段、或近年可能發生的風險損失做保險規劃，再進一步思考未來退休、長照等較長遠的需求。</p>
-                        </div>
-                        <div data-scroll-show>
-                            <h3 class="bg-words"data-scroll-show="500">保大再保小</h3>
-                            <div style="background: url('img/bam-habit-plan-3.jpg');"></div>
-                            <h4>先保障家中主要經濟支柱</h4>
-                            <p>建構家中主要經濟支柱足夠的保障，避免因意外或疾病對既有生活造成衝擊、甚至造成其他家人的負擔。</p>
-                        </div>
-                    </div>
-                    <a class="habit-btn" href="https://www.nanshanlife.com.tw/nanshanlife/news/newscenter/1172?keyword=保險筆記" target="_blank" rel="noreferrer noopener">前往了解</a>
-
-                    <div class="plan-info" data-scroll-show-parent>
-                        <article data-scroll-show>
-                            <div>
-                                <h3 class="bg-words-blue">商品介紹</h3>
-                                <div>「南山人壽心心相惜生活習慣健康保險」保障範圍涵蓋由不良習慣引發的心血管疾病，提供重度/輕度特定傷病一次性給付、特定心血管手術暨特定處置及醫材補助、豁免保險費</div>
-                                <a class="habit-btn habit-more for-m" href="https://www.nanshanlife.com.tw/nanshanlife/product/103/427" target="_blank" rel="noreferrer noopener">了解更多</a>
+                        <div class="info-block-3">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>失智症中晚期</h3>
+                                    <p>生活自理能力逐漸退化，<br>到了晚期幾乎需要仰賴他人協助生活</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
                             </div>
-                            <div>
-                                <h3 class="bg-words-blue">商品特色</h3>
-                                <div>
-                                    <div class="plan-info-flex">
-                                        <img data-scroll-show style="opacity: 0.4! important;" src="img/bam-habit-heart.png">
-                                        <h4>強心</h4><p>強化不良生活習慣造成之心血管疾病保障<span>(保障至被保險人保險年齡達95歲之保單年度末)</span></p>
-                                    </div>
-                                    <div class="plan-info-flex">
-                                        <img data-scroll-show style="opacity: 0.6! important;" src="img/bam-habit-heart.png">
-                                        <h4>貼心</h4><p>針對重度/輕度特定傷病提供生活習慣守護一次性給付，靈活因應治療</p>
-                                    </div>
-                                    <div class="plan-info-flex">
-                                        <img data-scroll-show style="opacity: 0.8! important;" src="img/bam-habit-heart.png">
-                                        <h4>全心</h4><p>除提供心血管疾病保障一次性給付，另有特定心血管手術暨特定處置保障及醫材補助</p>
-                                    </div>
-                                    <div class="plan-info-flex">
-                                        <img data-scroll-show style="opacity: 1! important;" src="img/bam-habit-heart.png">
-                                        <h4>安心</h4><p>提供豁免保費機制，保障安心不中斷</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <a data-scroll-show class="habit-btn habit-more for-pc" href="https://www.nanshanlife.com.tw/nanshanlife/product/103/427" target="_blank" rel="noreferrer noopener">了解更多</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="notice">
-                <div class="notice-wrap" data-scroll-show>
-                    <article>
-                        <div style="text-align: center;">
-                            <h2 class="title"><img src="img/bam-habit-notice-deco-1.png">注意事項</h2>
+                            <a class="info-a-block" style="top: 58.5%; left: 52%" href="">
+                                <img src="img/bam-info-tag-blue-3.svg">
+                                <h4>居家照護</h4>
+                                <article>
+                                    <img style="width: 35%;" src="img/bam-info-logo-blue-3-1.jpg">
+                                    <p>媒合專業照顧員，居家照護長輩，陪伴好安心</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 70%; left: 46%" href="">
+                                <img src="img/bam-info-tag-blue-3.svg">
+                                <h4>輔具支持</h4>
+                                <article>
+                                    <img style="width: 45%;" src="img/bam-info-logo-blue-3-2.jpg">
+                                    <p>一站找齊照護長輩所需的輔具</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 62.5%; left: 35%" href="">
+                                <img src="img/bam-info-tag-blue-3.svg">
+                                <h4>輔具到宅</h4>
+                                <article>
+                                    <img style="width: 40%;" src="img/bam-info-logo-blue-3-3.jpg">
+                                    <p>到府評估、提供試機，依長輩需求選擇購買或租賃輔具</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 67%; left: 59%" href="">
+                                <img src="img/bam-info-tag-blue-3.svg">
+                                <h4>居家改造</h4>
+                                <article>
+                                    <img style="width: 70%;" src="img/bam-info-logo-blue-3-4.jpg">
+                                    <p>一站式居家無障礙改善服務，幫助長輩舒適自在生活</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 63.25%; left: 68%" href="">
+                                <img src="img/bam-info-tag-blue-3.svg">
+                                <h4>親善飲食</h4>
+                                <article>
+                                    <img style="width: 15%;" src="img/bam-info-logo-blue-3-5.jpg">
+                                    <p>銀髮友善飲食以軟質設計貼合長者需求，均衡營養輕鬆攝取</p>
+                                </article>
+                            </a>
                         </div>
-                        <div class="notice-scroll">
-                            <ul>
-                                <li>各合作業者提供之專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
+                        <div class="notice-block">
+                            <h4>網頁注意事項</h4>
+                            <ol>
+                                <li>專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
                                 <li>健康守護圈之加值服務或合作廠商提供之產品、服務或優惠訊息等，均非屬保險契約權利義務之一部分。本公司與合作廠商間無代理或類似關係，合作廠商提供之產品、服務或優惠訊息，係由合作廠商各自提供及負責。</li>
-                                <li>參加專案者，必須遵守專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
-                                <li>參加專案者保證所有填寫或提出之資料均為真實且正確，並未有冒用或盜用任何第三人之資料，如有不實或不正確之情事時，將自動喪失專案資格，南山人壽不負任何責任，且如因此致生損害於南山人壽或任何第三人時，參加專案者應負一切相關責任。</li>
-                                <li>為保護您的權益，請詳閱<a href="https://www.nanshanlife.com.tw/nsclub/privacyPolicy" target="_blank" rel="noreferrer noopener">南山人壽個人資料保護聲明</a>。</li>
-                                <li>如有因不可歸責於南山人壽之事由，致參加本專案者所登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況時，南山人壽不負任何法律或賠償責任，參加者亦不得因此異議。</li>
-                            </ul>
+                                <li>參加本專案者，必須遵守本專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
+                            </ol>
                         </div>
-                    </article>
-                    <img class="notice-deco" src="img/bam-habit-notice-deco-2.png">
-                </div>
-            </section>
+                    </div>
 
-            <div class="lightbox-vid">
-                <div class="yt-wrap">
-                    <div class="ytVideo" data-videoid="7gvqaGC_EC4"></div>
-                    <a class="lightbox-close" href=""><img class="fullimg" src="img/bam-habit-close.svg"></a>
-                </div>
-            </div>
-
-            <div class="lightbox-card">
-                <div class="lightbox-card-wrap">
-                    <div data-card-target="1" style="background: url('img/bam-habit-q-1-card.png');"></div>
-                    <div data-card-target="2" style="background: url('img/bam-habit-q-2-card.png');"></div>
-                    <div data-card-target="3" style="background: url('img/bam-habit-q-3-card.png');"></div>
-                    <div data-card-target="4" style="background: url('img/bam-habit-q-4-card.png');"></div>
-                    <div data-card-target="5" style="background: url('img/bam-habit-q-5-card.png');"></div>
-                    <div data-card-target="6" style="background: url('img/bam-habit-q-6-card.png');"></div>
-                    <div data-card-target="7" style="background: url('img/bam-habit-q-7-card.png');"></div>
-                    <div data-card-target="8" style="background: url('img/bam-habit-q-8-card.png');"></div>
-                    <a class="lightbox-close" href=""><img class="fullimg" src="img/bam-habit-close.svg"></a>
-                </div>
-            </div>
-
-            <div class="lightbox-invest">
-                <div class="lightbox-invest-wrap">
-                    <div data-invest-target="1"><h4>運動習慣｜缺乏運動又坐得久</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-1.png"></div>
-                    <div data-invest-target="2"><h4>飲食習慣｜吃三餐及宵夜的習慣</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-2.png"></div>
-                    <div data-invest-target="3"><h4>飲食習慣｜甜食、含糖飲料已成為日常</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-3.png"></div>
-                    <div data-invest-target="4"><h4>睡眠習慣｜晚睡又睡不飽</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-4.png"></div>
-                    <div data-invest-target="5"><h4>睡眠習慣｜國人有失眠的困擾</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-5.png"></div>
-                    <div data-invest-target="6"><h4>NG習慣｜從生活NG習慣看健康信心</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-6.png"></div>
-                    <div data-invest-target="7"><h4>NG習慣｜沒做健檢的人NG習慣比例較高</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-7.png"></div>
-                    <div data-invest-target="8"><h4>健康風險疾病排行榜</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-8.png"></div>
-                    <div data-invest-target="9"><h4>生重病不敢休息的國人比例</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-9.png"></div>
-                    <div data-invest-target="10"><h4>為促進健康每月願意花費的金額</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-10.png"></div>
-                    <div data-invest-target="11"><h4>醫療需求及保險缺口</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-11.png"></div>
-                    <div data-invest-target="12"><h4>願意購買保險的時機點</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-12.png"></div>
-                    <a class="lightbox-close" href=""><img src="img/bam-habit-close.svg"></a>
-                    <img class="bam-habit-zoom for-m" src="img/bam-habit-zoom.svg">
+                    <div class="bam-info-content-pink">
+                        <div class="info-block-video">
+                            <img class="fullimg" src="img/bam-info-stand-video.png">
+                        </div>
+                        <div class="info-block-1">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>健康期</h3>
+                                    <p>生活中的習慣，都是守護未來行動力的關鍵</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
+                            </div>
+                            <a class="info-a-block" style="top: 28%; left: 47%" href="">
+                                <img src="img/bam-info-tag-pink-1.svg">
+                                <h4>樂活運動</h4>
+                                <article>
+                                    <img style="width: 50%;" src="img/bam-info-logo-pink-1-1.jpg">
+                                    <p>維持肌力與心肺力，守護自主生活，遠離失能</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 31%; left: 35%" href="">
+                                <img src="img/bam-info-tag-pink-1.svg">
+                                <h4>健康守護</h4>
+                                <article>
+                                    <img style="width: 30%;" src="img/bam-info-logo-pink-1-2.jpg">
+                                    <p>運動讓生活更好，透過正確的身體活動達到健康生活！</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 31.5%; left: 64%" href="">
+                                <img src="img/bam-info-tag-pink-1.svg">
+                                <h4>定期健檢</h4>
+                                <article>
+                                    <img style="width: 15%;" src="img/bam-info-logo-pink-1-3.jpg">
+                                    <p>定期健檢，掌握身體狀況；及早預防、調整，生活更自在，失能不提前</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 35.5%; left: 50%" href="">
+                                <img src="img/bam-info-tag-pink-1.svg">
+                                <h4>健康量測</h4>
+                                <article>
+                                    <img style="width: 50%" src="img/bam-info-logo-pink-1-4.jpg">
+                                    <p>量測血氧、血糖等指標，關注身體健康</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 38.75%; left: 64%" href="">
+                                <img src="img/bam-info-tag-pink-1.svg">
+                                <h4>營養加分</h4>
+                                <article>
+                                    <img style="width: 45%;" src="img/bam-info-logo-pink-1-5.jpg">
+                                    <p>提供日常所需的蛋白質與膳食纖維，全面守護健康</p>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="info-block-2">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>亞健康期</h3>
+                                    <p>雖然還能自理，<br>但日常動作已需要更多關注與保養</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
+                            </div>
+                            <a class="info-a-block" style="top: 46%; left: 32%" href="">
+                                <img src="img/bam-info-tag-pink-2.svg">
+                                <h4>遠距健管</h4>
+                                <article>
+                                    <img style="width: 20%;" src="img/bam-info-logo-pink-2-1.jpg">
+                                    <p>隨時掌握自己的健康，避免失能發生，守護健康與生活品質</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 49%; left: 22%" href="">
+                                <img src="img/bam-info-tag-pink-2.svg">
+                                <h4>復健復能</h4>
+                                <article>
+                                    <img style="width: 50%;" src="img/bam-info-logo-pink-2-2.jpg">
+                                    <p>專業物理治療，根本改善身體問題，找回健康舒適生活</p>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="info-block-3">
+                            <div class="info-stand">
+                                <article>
+                                    <h3>長照失能</h3>
+                                    <p>生活多項需協助、跌倒風險高，<br>後期長期臥床、完全依賴照護</p>
+                                </article>
+                                <img src="img/bam-info-stand.svg">
+                            </div>
+                            <div class="info-a-title small" style="top: 55.5%; left: 55%;">
+                                <img class="fullimg" src="img/bam-info-wood-small.svg">
+                                <p>照顧及專業服務</p>
+                            </div>
+                            <div class="info-a-title big" style="top: 62.5%; left: 64%;">
+                                <img class="fullimg" src="img/bam-info-wood-big.svg">
+                                <p>輔具租借、購買及<br>居家無障礙環境改善</p>
+                            </div>
+                            <div class="info-a-title small" style="top: 72%; left: 17%;">
+                                <img class="fullimg" src="img/bam-info-wood-small.svg">
+                                <p>交通接送服務</p>
+                            </div>
+                            <div class="info-a-title small" style="top: 77%; left: 45.5%;">
+                                <img class="fullimg" src="img/bam-info-wood-small.svg">
+                                <p>喘息服務</p>
+                            </div>
+                            <a class="info-a-block" style="top: 58.5%; left: 52%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>牙醫到宅</h4>
+                                <article>
+                                    <img style="width: 40%;" src="img/bam-info-logo-pink-3-1.jpg">
+                                    <p>為在宅長照2.0病患提供看牙服務，讓口腔健康跨越行動障礙</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 64%; left: 29%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>親善飲食</h4>
+                                <article>
+                                    <img style="width: 15%;" src="img/bam-info-logo-pink-3-2.jpg">
+                                    <p>銀髮友善飲食以軟質設計貼合長者需求，均衡營養輕鬆攝取</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 61.25%; left: 39%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>醫材支援</h4>
+                                <article>
+                                    <img style="width: 50%;" src="img/bam-info-logo-pink-3-3.jpg">
+                                    <p>提供長照醫護用品，安心、方便、簡捷的購物支援</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 70%; left: 42%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>失能復健</h4>
+                                <article>
+                                    <img style="width: 40%;" src="img/bam-info-logo-pink-3-4.jpg">
+                                    <p>外骨骼機器人，隨時在家陪您練，復健輕鬆融入日常</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 67%; left: 59%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>居家改造</h4>
+                                <article>
+                                    <img style="width: 70%;" src="img/bam-info-logo-pink-3-5.jpg">
+                                    <p>一站式居家無障礙改善服務，幫助長輩舒適自在生活</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 70.5%; left: 67%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>輔具支持</h4>
+                                <article>
+                                    <img style="width: 45%;" src="img/bam-info-logo-pink-3-6.jpg">
+                                    <p>一站找齊照護長輩所需的輔具</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 74%; left: 62%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>輔具到宅</h4>
+                                <article>
+                                    <img style="width: 35%;" src="img/bam-info-logo-pink-3-7.jpg">
+                                    <p>到府評估、提供試機，依長輩需求選擇購買或租賃輔具。</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 75%; left: 22%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>交通接送</h4>
+                                <article>
+                                    <img style="width: 35%;" src="img/bam-info-logo-pink-3-8.jpg">
+                                    <p>針對行動不便的朋友與長照族提供接送與貼心的無障礙服務</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 80%; left: 45%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>心理支持</h4>
+                                <article>
+                                    <img style="width: 60%;" src="img/bam-info-logo-pink-3-9.jpg">
+                                    <p>照顧長照家人的壓力需要有人傾聽，與專業人士的一對一對談，一起為壓力找出口</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 83.5%; left: 30%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>居家照護</h4>
+                                <article>
+                                    <img style="width: 40%;" src="img/bam-info-logo-pink-3-10.jpg">
+                                    <p>專業物理治療，根本改善身體問題，找回健康舒適生活</p>
+                                </article>
+                            </a>
+                            <a class="info-a-block" style="top: 83.5%; left: 60%" href="">
+                                <img src="img/bam-info-tag-pink-3.svg">
+                                <h4>家事清潔</h4>
+                                <article>
+                                    <img style="width: 30%;" src="img/bam-info-logo-pink-3-11.jpg">
+                                    <p>協助行動不便的朋友及長輩，進行居家環境打掃</p>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="notice-block">
+                            <h4>網頁注意事項</h4>
+                            <ol>
+                                <li>專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
+                                <li>健康守護圈之加值服務或合作廠商提供之產品、服務或優惠訊息等，均非屬保險契約權利義務之一部分。本公司與合作廠商間無代理或類似關係，合作廠商提供之產品、服務或優惠訊息，係由合作廠商各自提供及負責。</li>
+                                <li>參加本專案者，必須遵守本專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
