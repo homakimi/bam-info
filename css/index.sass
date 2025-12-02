@@ -10,6 +10,40 @@ $brown: #bf7064
     font-size: 1vw
     background: #FFF
 
+    .bam-info-cursor
+        display: none
+        z-index: 3
+        position: absolute
+        width: 3%
+        top: 0
+        left: 0
+        filter: drop-shadow(0 0.5em 0.25em rgba(#000, 0.5))
+
+    .bam-info-short
+        position: relative
+        height: 111em
+        overflow: hidden
+        &.active
+            height: auto
+            .bam-info-cut
+                display: none
+        .bam-info-cut
+            display: block
+            z-index: 1
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            .info-stand
+                bottom: 20%
+                left: 64%
+                article
+                    background: #638edd
+        .bam-info-cut-pink
+            .info-stand
+                article
+                    background: #f95858
+
     .bam-info-bg
         position: relative
         width: 100%
@@ -28,12 +62,14 @@ $brown: #bf7064
             bottom: -12%
             right: -15%
             width: 20%
+            transition: transform 0.5s
 
     .bam-info-title-1,
     .bam-info-title-2
         position: absolute
         display: block
         width: 20%
+        transition: transform 0.5s
     .bam-info-title-1
         top: 7.8%
         left: 26%
@@ -46,6 +82,7 @@ $brown: #bf7064
         position: absolute
         display: block
         width: 14.5%
+        transition: transform 0.5s
         p
             position: absolute
             font-size: 0.9em
@@ -84,6 +121,54 @@ $brown: #bf7064
         top: 8.2%
         left: 49.6%
 
+    .bam-info-des
+        z-index: 1
+        position: absolute
+        width: 50%
+        right: 0
+        left: 0
+        margin: auto
+        top: 5.5%
+        opacity: 0
+        pointer-events: none
+        transform: translateY(1.5em)
+        transition: opacity 0.5s, transform 0.5s
+        &.active
+            opacity: 1
+            pointer-events: all
+            transform: translateY(0)
+        p
+            position: absolute
+            top: 60%
+            left: 50%
+            width: 80%
+            text-align: center
+            font-size: 1.2em
+            transform: translate(-50%, -50%)
+        .bam-info-des-close
+            position: absolute
+            right: 2%
+            bottom: 5%
+            width: 7%
+            padding-top: 7%
+
+    .car-green,
+    .car-blue,
+    .car-red
+        display: block
+        position: absolute
+    .car-green
+        top: 9%
+        left: 13.5%
+        width: 5.5%
+    .car-blue
+        top: 14.65%
+        left: 85%
+        width: 5%
+    .car-red
+        top: 31.1%
+        left: 17.5%
+        width: 5.5%
 
     .info-stand
         position: absolute
@@ -116,15 +201,34 @@ $brown: #bf7064
             p
                 font-size: 0.9em
                 padding: 0.25em 0 0.5em 0
+
     .info-block-video
         position: absolute
         width: 20%
         top: 22.5%
         left: 19.5%
+        a
+            position: absolute
+            width: 93.5%
+            padding-top: 53.5%
+            top: 9%
+            left: 3.5%
+            background-repeat: no-repeat! important
+            background-position: center center! important
+            background-size: cover! important
+            overflow: hidden
+            img
+                display: block
+                position: absolute
+                width: 15%
+                top: 35%
+                left: 45%
+
     .info-a-block
         display: block
         position: absolute
         width: 15.5%
+        transition: transform 0.5s
         > img
             position: absolute
             display: block
@@ -224,8 +328,91 @@ $brown: #bf7064
         .notice-block
             top: 88%
 
-
+    .bam-info-lightbox,
+    .bam-info-lightbox-popup
+        display: none
+        z-index: 9
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(#000, 0.8)
+    .bam-info-lightbox-blue,
+    .bam-info-lightbox-pink
+        display: none
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 65%
+        transform: translate(-50%, -50%)
+        background: #FFF
+        padding: 1.5em 3em
+        border-radius: 2em
+        border: 0.25em solid $blue
+        text-align: justify
+        .bam-info-lightbox-close
+            display: block
+            position: absolute
+            top: 1.5em
+            right: 1.5em
+            width: 1.5em
+        h4
+            font-size: 1.25em
+            text-align: center
+            padding-bottom: 1em
+            color: #638edd
+        article
+            max-height: 70vh
+            overflow-y: auto
+            -webkit-overflow-scrolling: touch
+            > div
+                margin-top: 1.5em
+                padding-top: 1.5em
+                border-top: 1px dashed #CCC
+                font-size: 0.8em
+                ul
+                    margin-left: 1.5em
+    .bam-info-lightbox-pink
+        border-color: $pink
+        h4
+            color: #f47878
+    .info-popup-block
+        display: none
+        position: absolute
+        width: 50%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .bam-info-lightbox-popup-close
+        position: absolute
+        width: 7.5%
+        padding-top: 7.5%
+        right: 4.5%
+        top: 4.5%
+        border-radius: 50%
+    .bam-info-lightbox-popup-href
+        display: block
+        position: absolute
+        bottom: 4%
+        left: 0
+        right: 0
+        margin: auto
+        width: 22%
+        padding-top: 6.5%
+        border-radius: 10em
 
 @media only screen and (min-width: 1025px)
+    .bam-info-wrap
+        .kv-ppl
+            &:hover
+                transform: scale(1.1)
+        .bam-info-title-1,
+        .bam-info-title-2,
+        .bam-info-say-1,
+        .bam-info-say-2,
+        .info-a-block
+            &:hover
+                transform: translateY(-0.5em)
 
 @media only screen and (max-width: 1024px)

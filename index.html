@@ -4,8 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=1"/>
         <script nonce="rAnd0m123" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script nonce="rAnd0m123" src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js" integrity="sha384-kLg4yw7ysk2F34aYhHIrdq/AXIkHzZ808L3af45jUqWQoMPN8VnJneCjOR8+THSG" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css" integrity="sha384-OVtDJ2WfU22geHR8xWErSSHJMaH21QOP9w33a+A2MzyE4uxDS2/5rhIw9YZkWv5R" crossorigin="anonymous" />
         <link type="text/css" rel="stylesheet" href="css/index.css" />
         <script type="text/javascript" src="js/main.js"></script>
 
@@ -19,31 +17,67 @@
     </head>
     <body>
         <div class="bam-info-wrap">
+            <img class="bam-info-cursor" src="img/bam-info-cursor.png">
             <div class="bam-info-short">
+
+                <a href="" class="bam-info-cut bam-info-cut-blue" data-cut="1">
+                    <img class="fullimg" src="img/bam-info-cut.png">
+                    <div class="info-stand">
+                        <article>
+                            <h3>失智症中晚期</h3>
+                            <p>生活自理能力逐漸退化，<br>到了晚期幾乎需要仰賴他人協助生活</p>
+                        </article>
+                        <img src="img/bam-info-stand.svg">
+                    </div>
+                </a>
+                <a href="" class="bam-info-cut bam-info-cut-pink" data-cut="2" style="display: none;">
+                    <img class="fullimg" src="img/bam-info-cut.png">
+                    <div class="info-stand">
+                        <article>
+                            <h3>長照失能</h3>
+                            <p>生活多項需協助、跌倒風險高，<br>後期長期臥床、完全依賴照護</p>
+                        </article>
+                        <img src="img/bam-info-stand.svg">
+                    </div>
+                </a>
+
                 <div class="bam-info-bg">
+
+                    <img class="car-green" src="img/bam-info-car-green.svg">
+                    <img class="car-blue" src="img/bam-info-car-blue.svg">
+                    <img class="car-red" src="img/bam-info-car-red.svg">
+
+                    <a class="bam-info-title-1 active" data-main="1" href=""><img class="fullimg" src="img/bam-info-t-1.png" alt="失智服務導航指引"></a>
+                    <a class="bam-info-title-2" data-main="2" href=""><img class="fullimg" src="img/bam-info-t-2.png" alt="長照服務導航指引"></a>
+                    <img class="bam-info-house-1" src="img/bam-info-h-1.png">
+                    <img class="bam-info-house-2" src="img/bam-info-h-2.png">
                     <div class="bam-info-title">
                         <img class="fullimg" src="img/bam-info-title.png" alt="長照、失智服務導航">
-                        <img class="kv-ppl" src="img/bam-info-kv-ppl.png">
+                        <a class="kv-ppl" href=""><img class="fullimg" src="img/bam-info-kv-ppl.png"></a>
                     </div>
-                    <a class="bam-info-title-1" href=""><img class="fullimg" src="img/bam-info-t-1.png" alt="失智服務導航指引"></a>
-                    <a class="bam-info-title-2" href=""><img class="fullimg" src="img/bam-info-t-2.png" alt="長照服務導航指引"></a>
-                    <a class="bam-info-say-1" href="">
+                    <div class="bam-info-des">
+                        <img class="fullimg" src="img/bam-info-des.svg">
+                        <p>南山人壽自2020年推出「健康守護圈」，整合超過50家合作夥伴，打造從健康、亞健康、疾病到失能的全方位照護服務，保戶使用已近50萬次。2025年再升級，聚焦長照與失智，推出「健康守護圈長照失智服務導航」，提供從預防、延緩到照護的完整支持。</p>
+                        <a class="bam-info-des-close" href=""></a>
+                    </div>
+                    <a class="bam-info-say-1" href="" data-say-lightbox="1">
                         <img class="fullimg" src="img/bam-info-say-1.png">
                         <p>健康守護圈合作夥伴攜手打造「失智服務導航」，從健康期到失智症早期與中晚期，串連各階段資源，守護每一段生命旅程。</p>
                         <span>看更多</span>
                     </a>
-                    <a class="bam-info-say-2" href="">
+                    <a class="bam-info-say-2" href="" data-say-lightbox="2">
                         <img class="fullimg" src="img/bam-info-say-2.png">
                         <p>健康守護圈合作夥伴攜手打造「長照服務導航」，陪伴民眾從健康到失能各階段，提供貼心而完善的照護支持，讓每段旅程都不孤單。</p>
                         <span>看更多</span>
                     </a>
-                    <img class="bam-info-house-1" src="img/bam-info-h-1.png">
-                    <img class="bam-info-house-2" src="img/bam-info-h-2.png">
 
                     <!-- content -->
-                    <div class="bam-info-content-blue" style="display: none;">
+                    <div class="bam-info-content-blue" data-main-target="1">
                         <div class="info-block-video">
                             <img class="fullimg" src="img/bam-info-stand-video.png">
+                            <a href="" style="background: url('');">
+                                <img src="img/bam-info-play.svg">
+                            </a>
                         </div>
                         <div class="info-block-1">
                             <div class="info-stand">
@@ -53,7 +87,7 @@
                                 </article>
                                 <img src="img/bam-info-stand.svg">
                             </div>
-                            <a class="info-a-block" style="top: 27.5%; left: 49.5%" href="">
+                            <a class="info-a-block" style="top: 27.5%; left: 49.5%" data-popup="blue-1" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>運動益腦</h4>
                                 <article>
@@ -61,7 +95,7 @@
                                     <p>維持肌力與心肺力，守護自主生活，遠離失能</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 31.5%; left: 64%" href="">
+                            <a class="info-a-block" style="top: 31.5%; left: 64%" data-popup="blue-2" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>基因檢測</h4>
                                 <article>
@@ -69,7 +103,7 @@
                                     <p>了解自己是否帶有失智症基因，提早預防</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 29.9%; left: 41%" href="">
+                            <a class="info-a-block" style="top: 29.9%; left: 41%" data-popup="blue-3" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>健康量測</h4>
                                 <article>
@@ -77,7 +111,7 @@
                                     <p>量測血氧、血糖等指標，關注身體健康</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 35%; left: 49.5%" href="">
+                            <a class="info-a-block" style="top: 35%; left: 49.5%" data-popup="blue-4" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>健康量測</h4>
                                 <article>
@@ -85,7 +119,7 @@
                                     <p>量測五種生理數值，幫您顧健康</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 32.5%; left: 33.5%" href="">
+                            <a class="info-a-block" style="top: 32.5%; left: 33.5%" data-popup="blue-5" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>聽力睡眠</h4>
                                 <article>
@@ -93,7 +127,7 @@
                                     <p>聽力、睡眠檢測預防失智</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 38%; left: 61%" href="">
+                            <a class="info-a-block" style="top: 38%; left: 61%" data-popup="blue-6" href="">
                                 <img src="img/bam-info-tag-blue-1.svg">
                                 <h4>認知訓練</h4>
                                 <article>
@@ -110,7 +144,7 @@
                                 </article>
                                 <img src="img/bam-info-stand.svg">
                             </div>
-                            <a class="info-a-block" style="top: 45.5%; left: 39%" href="">
+                            <a class="info-a-block" style="top: 45.5%; left: 39%" data-popup="blue-7" href="">
                                 <img src="img/bam-info-tag-blue-2.svg">
                                 <h4>失智友善</h4>
                                 <article>
@@ -118,7 +152,7 @@
                                     <p>幫助迷路的長輩找到回家的路</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 46.5%; left: 20%" href="">
+                            <a class="info-a-block" style="top: 46.5%; left: 20%" data-popup="blue-8" href="">
                                 <img src="img/bam-info-tag-blue-2.svg">
                                 <h4>營養加分</h4>
                                 <article>
@@ -126,7 +160,7 @@
                                     <p>提供長輩所需的蛋白質與膳食纖維，全面守護健康</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 50%; left: 26%" href="">
+                            <a class="info-a-block" style="top: 50%; left: 26%" data-popup="blue-9" href="">
                                 <img src="img/bam-info-tag-blue-2.svg">
                                 <h4>照護陪伴</h4>
                                 <article>
@@ -143,7 +177,7 @@
                                 </article>
                                 <img src="img/bam-info-stand.svg">
                             </div>
-                            <a class="info-a-block" style="top: 58.5%; left: 52%" href="">
+                            <a class="info-a-block" style="top: 58.5%; left: 52%" data-popup="blue-10" href="">
                                 <img src="img/bam-info-tag-blue-3.svg">
                                 <h4>居家照護</h4>
                                 <article>
@@ -151,7 +185,7 @@
                                     <p>媒合專業照顧員，居家照護長輩，陪伴好安心</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 70%; left: 46%" href="">
+                            <a class="info-a-block" style="top: 70%; left: 46%" data-popup="blue-11" href="">
                                 <img src="img/bam-info-tag-blue-3.svg">
                                 <h4>輔具支持</h4>
                                 <article>
@@ -159,7 +193,7 @@
                                     <p>一站找齊照護長輩所需的輔具</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 62.5%; left: 35%" href="">
+                            <a class="info-a-block" style="top: 62.5%; left: 35%" data-popup="blue-12" href="">
                                 <img src="img/bam-info-tag-blue-3.svg">
                                 <h4>輔具到宅</h4>
                                 <article>
@@ -167,7 +201,7 @@
                                     <p>到府評估、提供試機，依長輩需求選擇購買或租賃輔具</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 67%; left: 59%" href="">
+                            <a class="info-a-block" style="top: 67%; left: 59%" data-popup="blue-13" href="">
                                 <img src="img/bam-info-tag-blue-3.svg">
                                 <h4>居家改造</h4>
                                 <article>
@@ -175,7 +209,7 @@
                                     <p>一站式居家無障礙改善服務，幫助長輩舒適自在生活</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 63.25%; left: 68%" href="">
+                            <a class="info-a-block" style="top: 63.25%; left: 68%" data-popup="blue-14" href="">
                                 <img src="img/bam-info-tag-blue-3.svg">
                                 <h4>親善飲食</h4>
                                 <article>
@@ -194,9 +228,12 @@
                         </div>
                     </div>
 
-                    <div class="bam-info-content-pink">
+                    <div class="bam-info-content-pink" data-main-target="2" style="display: none;">
                         <div class="info-block-video">
                             <img class="fullimg" src="img/bam-info-stand-video.png">
+                            <a href="" style="background: url('');">
+                                <img src="img/bam-info-play.svg">
+                            </a>
                         </div>
                         <div class="info-block-1">
                             <div class="info-stand">
@@ -206,7 +243,7 @@
                                 </article>
                                 <img src="img/bam-info-stand.svg">
                             </div>
-                            <a class="info-a-block" style="top: 28%; left: 47%" href="">
+                            <a class="info-a-block" style="top: 28%; left: 47%" data-popup="pink-1" href="">
                                 <img src="img/bam-info-tag-pink-1.svg">
                                 <h4>樂活運動</h4>
                                 <article>
@@ -214,7 +251,7 @@
                                     <p>維持肌力與心肺力，守護自主生活，遠離失能</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 31%; left: 35%" href="">
+                            <a class="info-a-block" style="top: 31%; left: 35%" data-popup="pink-2" href="">
                                 <img src="img/bam-info-tag-pink-1.svg">
                                 <h4>健康守護</h4>
                                 <article>
@@ -222,7 +259,7 @@
                                     <p>運動讓生活更好，透過正確的身體活動達到健康生活！</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 31.5%; left: 64%" href="">
+                            <a class="info-a-block" style="top: 31.5%; left: 64%" data-popup="pink-3" href="">
                                 <img src="img/bam-info-tag-pink-1.svg">
                                 <h4>定期健檢</h4>
                                 <article>
@@ -230,7 +267,7 @@
                                     <p>定期健檢，掌握身體狀況；及早預防、調整，生活更自在，失能不提前</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 35.5%; left: 50%" href="">
+                            <a class="info-a-block" style="top: 35.5%; left: 50%" data-popup="pink-4" href="">
                                 <img src="img/bam-info-tag-pink-1.svg">
                                 <h4>健康量測</h4>
                                 <article>
@@ -238,7 +275,7 @@
                                     <p>量測血氧、血糖等指標，關注身體健康</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 38.75%; left: 64%" href="">
+                            <a class="info-a-block" style="top: 38.75%; left: 64%" data-popup="pink-5" href="">
                                 <img src="img/bam-info-tag-pink-1.svg">
                                 <h4>營養加分</h4>
                                 <article>
@@ -255,7 +292,7 @@
                                 </article>
                                 <img src="img/bam-info-stand.svg">
                             </div>
-                            <a class="info-a-block" style="top: 46%; left: 32%" href="">
+                            <a class="info-a-block" style="top: 46%; left: 32%" data-popup="pink-6" href="">
                                 <img src="img/bam-info-tag-pink-2.svg">
                                 <h4>遠距健管</h4>
                                 <article>
@@ -263,7 +300,7 @@
                                     <p>隨時掌握自己的健康，避免失能發生，守護健康與生活品質</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 49%; left: 22%" href="">
+                            <a class="info-a-block" style="top: 49%; left: 22%" data-popup="pink-7" href="">
                                 <img src="img/bam-info-tag-pink-2.svg">
                                 <h4>復健復能</h4>
                                 <article>
@@ -296,7 +333,7 @@
                                 <img class="fullimg" src="img/bam-info-wood-small.svg">
                                 <p>喘息服務</p>
                             </div>
-                            <a class="info-a-block" style="top: 58.5%; left: 52%" href="">
+                            <a class="info-a-block" style="top: 58.5%; left: 52%" data-popup="pink-8" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>牙醫到宅</h4>
                                 <article>
@@ -304,7 +341,7 @@
                                     <p>為在宅長照2.0病患提供看牙服務，讓口腔健康跨越行動障礙</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 64%; left: 29%" href="">
+                            <a class="info-a-block" style="top: 64%; left: 29%" data-popup="pink-9" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>親善飲食</h4>
                                 <article>
@@ -312,7 +349,7 @@
                                     <p>銀髮友善飲食以軟質設計貼合長者需求，均衡營養輕鬆攝取</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 61.25%; left: 39%" href="">
+                            <a class="info-a-block" style="top: 61.25%; left: 39%" data-popup="pink-10" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>醫材支援</h4>
                                 <article>
@@ -320,7 +357,7 @@
                                     <p>提供長照醫護用品，安心、方便、簡捷的購物支援</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 70%; left: 42%" href="">
+                            <a class="info-a-block" style="top: 70%; left: 42%" data-popup="pink-11" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>失能復健</h4>
                                 <article>
@@ -328,7 +365,7 @@
                                     <p>外骨骼機器人，隨時在家陪您練，復健輕鬆融入日常</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 67%; left: 59%" href="">
+                            <a class="info-a-block" style="top: 67%; left: 59%" data-popup="pink-12" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>居家改造</h4>
                                 <article>
@@ -336,7 +373,7 @@
                                     <p>一站式居家無障礙改善服務，幫助長輩舒適自在生活</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 70.5%; left: 67%" href="">
+                            <a class="info-a-block" style="top: 70.5%; left: 67%" data-popup="pink-13" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>輔具支持</h4>
                                 <article>
@@ -344,7 +381,7 @@
                                     <p>一站找齊照護長輩所需的輔具</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 74%; left: 62%" href="">
+                            <a class="info-a-block" style="top: 74%; left: 62%" data-popup="pink-14" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>輔具到宅</h4>
                                 <article>
@@ -352,7 +389,7 @@
                                     <p>到府評估、提供試機，依長輩需求選擇購買或租賃輔具。</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 75%; left: 22%" href="">
+                            <a class="info-a-block" style="top: 75%; left: 22%" data-popup="pink-15" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>交通接送</h4>
                                 <article>
@@ -360,7 +397,7 @@
                                     <p>針對行動不便的朋友與長照族提供接送與貼心的無障礙服務</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 80%; left: 45%" href="">
+                            <a class="info-a-block" style="top: 80%; left: 45%" data-popup="pink-16" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>心理支持</h4>
                                 <article>
@@ -368,7 +405,7 @@
                                     <p>照顧長照家人的壓力需要有人傾聽，與專業人士的一對一對談，一起為壓力找出口</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 83.5%; left: 30%" href="">
+                            <a class="info-a-block" style="top: 83.5%; left: 30%" data-popup="pink-17" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>居家照護</h4>
                                 <article>
@@ -376,7 +413,7 @@
                                     <p>專業物理治療，根本改善身體問題，找回健康舒適生活</p>
                                 </article>
                             </a>
-                            <a class="info-a-block" style="top: 83.5%; left: 60%" href="">
+                            <a class="info-a-block" style="top: 83.5%; left: 60%" data-popup="pink-18" href="">
                                 <img src="img/bam-info-tag-pink-3.svg">
                                 <h4>家事清潔</h4>
                                 <article>
@@ -394,6 +431,134 @@
                             </ol>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="bam-info-lightbox">
+                <div class="bam-info-lightbox-blue" data-say-lightbox-target="1">
+                    <a class="bam-info-lightbox-close" href=""><img class="fullimg" src="img/bam-info-close-blue.svg"></a>
+                    <h4>為什麼要做失能服務導航？</h4>
+                    <article>
+                        南山人壽在2020年率先推出健康守護圈，為保戶打造全健康歷程的「健康促進」與「醫療照護」加值服務系統，至今結盟逾50家合作夥伴，從健康、亞健康、疾病到失能，提供全方位完善健康照護服務，保戶使用次數已近50萬次。<br>
+                        <br>
+                        2025年南山人壽健康守護圈再升級，針對失智，從預防、延緩到協助照護，推出守護圈失智服務導航。<br>
+                        <br>
+                        在台灣步入超高齡社會之際，65歲以上失智盛行率將接近8%，同時每五個台灣人就可能有一位帶有一個可能造成失智的ApoE ε4基因，比一般無此基因者失智風險增加3~5倍，有11到16萬人可能帶有二個ApoE ε4基因，失智風險就會暴增10~15倍。<br>
+                        <br>
+                        健康守護圈在健康期提供失智風險相關量測，若擔心有失智基因者，可進行基因檢測，有助精準預防及調整生活作息；聽力不佳、牙齒不健康、膽固醇異常、睡眠呼吸中止症等，亦可能拉高失智風險，都可透過守護圈合作夥伴進行事先的量測與改善，來降低失智風險；研究也指出，每周中強度運動達140分鐘以上，失智風險可望降低近7成，若能透過腦部訓練，拉高認知積分，失智風險也會隨積分顯著下降；因此在健康期亦有運動與認知訓練的合作夥伴，一起來協防保戶的失智風險。<br>
+                        <br>
+                        若已不幸罹患失智症，健康守護圈亦希望透過飲食營養、陪伴照護者及預防失智者走失等服務，延緩失智速度及降低對失智者家庭的衝擊。<br>
+                        <br>
+                        失智是一趟不可逆轉的旅程，當進入失智中晚期時，必須提供失智者安全感、有助照護的居家環境、適合的飲食維持健康，因此健康守護圈針對此歷程，亦有合作夥伴可提供適合長者的親善飲食、居家環境改善、必要的輔具提供或租賃，並可媒合專業照護員，真正作到全歷程的守護。<br>
+                        <div>
+                            參考資料來源：
+                            <ul>
+                                <li>南山人壽（2025）。2025永續健康白皮書。南山人壽股份有限公司。</li>
+                                <li>Zhang, H., Dong, J., Tian, Q., Li, Y., Xu, F., Liu, Y., … & Chen, Z. (2025). Moderate-to-vigorous physical activity at any dose reduces all-cause dementia risk regardless of frailty status. Journal of the American Medical Directors Association, 26(3), 105456.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="bam-info-lightbox-pink" data-say-lightbox-target="2">
+                    <a class="bam-info-lightbox-close" href=""><img class="fullimg" src="img/bam-info-close-pink.svg"></a>
+                    <h4>為什麼要做失能服務導航？</h4>
+                    <article>
+                        台灣進入超高齡社會，65 歲以上高齡人口占總人口數 20%，現行國內需長照人口已破百萬人次，據國發會預估，從 2021 年到 2031 年，台灣的失能人口將再增加 33 萬人次，長照需求急速增加。<br>
+                        <br>
+                        許多高齡失能長輩希望能在宅老化，如何利用相關資源，結合政府的長照政策，延緩長輩失能的速度，也讓照顧者能有喘息的空間，並增加在宅照護的品質。<br>
+                        <br>
+                        南山人壽在 2020 年率先推出健康守護圈，為保戶打造全健康歷程的「健康促進」與「醫療照護」加值服務系統，至今結盟逾 50 家合作夥伴，從健康、亞健康、疾病到失能，提供全方位完善健康照護服務，保戶使用次數已近 50 萬次。<br>
+                        <br>
+                        2025 年南山人壽健康守護圈再升級，針對高齡長照，從預防、延緩到協助照護，推出守護圈長照服務導航。<br>
+                        <br>
+                        高齡者若出現營養不良、衰弱及肌少症，就會增加長照風險，據國民衛生署的調查，65 歲以上高齡人口肌少症盛行率達 34.1%，等於每三位長者就有一位有肌少症；長者營養不良比率亦有 68%。<br>
+                        <br>
+                        南山人壽健康守護圈透過結盟廠商，在長者健康期，提供運動建議與課程，甚至是運動治療，強化長輩的肌力；亦可提供長輩所需的蛋白質與膳食纖維，強化體力、避免衰弱，且結合社區健康量測與定期健檢，即時追蹤長輩的健康狀況。<br>
+                        <br>
+                        進入亞健康期，亦可透過遠距健管與復健復能，延緩長輩失能的進程，甚至可作適度的扭轉，儘可能避免長輩過早進入長照階段。<br>
+                        <br>
+                        若需要在宅長照，健康守護圈的合作廠商亦可提供醫材支援、輔具支持與到宅、居家改造及失能復健，且可提供被照顧長者的親善飲食、交通接送服務；除了關心被照顧者，守護圈亦關心照顧者的身心健康，提供心理支持、照顧員媒介及家事清潔等，讓照顧者能有喘息空間。<br>
+                        <div>
+                            參考資料來源：
+                            <ul>
+                                <li>李郁強、趙俊祥（2024 年 5 月 1 日）。《居家醫療與長期照顧整合之相關法制研析》（第11屆專題研究報告）。立法院法制局。</li>
+                                <li>衛生福利部國民健康署。國民營養健康調查（原國民營養健康狀況變遷調查）。</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="bam-info-lightbox-popup">
+                <div class="info-popup-block" data-popup-target="blue-1">
+                    <img class="fullimg" src="img/bam-info-popup-blue-1.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-2">
+                    <img class="fullimg" src="img/bam-info-popup-blue-2.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-3">
+                    <img class="fullimg" src="img/bam-info-popup-blue-3.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-4">
+                    <img class="fullimg" src="img/bam-info-popup-blue-4.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-5">
+                    <img class="fullimg" src="img/bam-info-popup-blue-5.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-6">
+                    <img class="fullimg" src="img/bam-info-popup-blue-6.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-7">
+                    <img class="fullimg" src="img/bam-info-popup-blue-7.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-8">
+                    <img class="fullimg" src="img/bam-info-popup-blue-8.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-9">
+                    <img class="fullimg" src="img/bam-info-popup-blue-9.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-10">
+                    <img class="fullimg" src="img/bam-info-popup-blue-10.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-11">
+                    <img class="fullimg" src="img/bam-info-popup-blue-11.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-12">
+                    <img class="fullimg" src="img/bam-info-popup-blue-12.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-13">
+                    <img class="fullimg" src="img/bam-info-popup-blue-13.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
+                </div>
+                <div class="info-popup-block" data-popup-target="blue-14">
+                    <img class="fullimg" src="img/bam-info-popup-blue-14.png">
+                    <a class="bam-info-lightbox-popup-close" href=""></a>
+                    <a class="bam-info-lightbox-popup-href" href="" rel="noreferrer noopener"></a>
                 </div>
             </div>
         </div>
