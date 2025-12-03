@@ -56,10 +56,11 @@ $(document)
         $('[data-main]').removeClass('active');
         $(this).addClass('active');
         $('.bam-info-short').removeClass('active');
+        $('.bam-info-short').removeClass('main-1 main-2').addClass('main-'+$(this).data('main'));
         $('[data-cut], [data-main-target]').hide();
         $('[data-cut="'+$(this).data('main')+'"], [data-main-target="'+$(this).data('main')+'"]').fadeIn();
-        $('body, html').animate({ scrollTop: $('[data-main-target="'+$(this).data('main')+'"] .info-block-1 .info-stand').offset().top - window.innerHeight*0.5 }, 1000)
     }
+    $('body, html').animate({ scrollTop: $('[data-main-target="'+$(this).data('main')+'"] .info-block-1 .info-stand').offset().top - window.innerHeight*0.25 }, 1000)
 })
 .on('click', '[data-cut]', function() {
     $('.bam-info-short').addClass('active');
@@ -73,7 +74,19 @@ $(document)
 .on('click', '.bam-info-lightbox-popup-close, .bam-info-lightbox-popup', function() {
     $('.bam-info-lightbox-popup').fadeOut();
 })
-.on('click', '.info-popup-block, .bam-info-des, .bam-info-lightbox-blue, .bam-info-lightbox-pink', function(e) {
+.on('click', '[data-yt]', function() {
+    $('.bam-info-lightbox-youtube').fadeIn();
+    $('[data-yt-target]').hide();
+    $('[data-yt-target="'+$(this).data('yt')+'"]').show();
+    yplayers[$('[data-yt-target="'+$(this).data('yt')+'"] [data-yt-index]').data('yt-index')].playVideo();
+})
+.on('click', '.bam-info-lightbox-youtube-close, .bam-info-lightbox-youtube', function() {
+    $('.bam-info-lightbox-youtube').fadeOut();
+    for(var i=0; i<yplayers.length; i++) {
+        yplayers[i].pauseVideo();
+    }
+})
+.on('click', '.info-popup-block, .bam-info-des, .bam-info-lightbox-blue, .bam-info-lightbox-pink, .bam-info-yt-wrap', function(e) {
     e.stopPropagation();
 })
 
@@ -93,7 +106,8 @@ function urlDetect() {
 var videoUrlId;
 var yplayers = [];
 function onYouTubeIframeAPIReady() {
-    $('.ytVideo').each(function() {
+    $('.ytVideo').each(function(index) {
+        $(this).attr('data-yt-index', index);
         videoUrlId = $(this).data('videoid');
         yplayer = new YT.Player( $(this)[0], {
             videoId: videoUrlId,
@@ -102,11 +116,12 @@ function onYouTubeIframeAPIReady() {
                 playlist: videoUrlId,
                 autoplay: 0,
                 loop: 1,
+                mute: 1,
                 controls: 1,
                 showinfo: 0,
                 playsinline: 1,
                 modestbranding: 1,
-                fs: 0,
+                fs: 1,
                 rel: 0,
                 wmode: 'transparent'
             },
@@ -117,7 +132,7 @@ function onYouTubeIframeAPIReady() {
     })
 }
 function onPlayerReady(e) {
-    e.target.mute(), e.target.seekTo(0), e.target.playVideo();
+    // e.target.mute(), e.target.seekTo(0), e.target.playVideo();
 }
 function mainVisualResize() {
     var e = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,

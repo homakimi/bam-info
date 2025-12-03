@@ -58,6 +58,17 @@ body.fix {
   background: #FFF;
   overflow: hidden;
 }
+@keyframes showup {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
 .bam-info-wrap .bam-info-cursor {
   display: none;
   z-index: 3;
@@ -72,8 +83,11 @@ body.fix {
   height: 111em;
   overflow: hidden;
 }
-.bam-info-wrap .bam-info-short.active {
-  height: auto;
+.bam-info-wrap .bam-info-short.main-1.active {
+  height: 190em;
+}
+.bam-info-wrap .bam-info-short.main-2.active {
+  height: 220em;
 }
 .bam-info-wrap .bam-info-short.active .bam-info-cut {
   display: none !important;
@@ -109,6 +123,9 @@ body.fix {
   top: 0;
   left: 18%;
   width: 32%;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: showup 1s forwards;
 }
 .bam-info-wrap .bam-info-title .kv-ppl {
   position: absolute;
@@ -122,21 +139,34 @@ body.fix {
   position: absolute;
   display: block;
   width: 20%;
+  opacity: 0;
+  transform: translateY(25%);
+  transition: transform 0.5s;
+}
+.bam-info-wrap .bam-info-title-1 img,
+.bam-info-wrap .bam-info-title-2 img {
   transition: transform 0.5s;
 }
 .bam-info-wrap .bam-info-title-1 {
   top: 7.8%;
   left: 26%;
+  animation: showup 1s 1.25s forwards;
 }
 .bam-info-wrap .bam-info-title-2 {
   top: 2%;
   left: 56.25%;
+  animation: showup 1s 1.75s forwards;
 }
 .bam-info-wrap .bam-info-say-1,
 .bam-info-wrap .bam-info-say-2 {
   position: absolute;
   display: block;
   width: 14.5%;
+  opacity: 0;
+  transform: translateY(25%);
+}
+.bam-info-wrap .bam-info-say-1 > div,
+.bam-info-wrap .bam-info-say-2 > div {
   transition: transform 0.5s;
 }
 .bam-info-wrap .bam-info-say-1 p,
@@ -157,6 +187,7 @@ body.fix {
 .bam-info-wrap .bam-info-say-1 {
   top: 13%;
   left: 18%;
+  animation: showup 1s 1.5s forwards;
 }
 .bam-info-wrap .bam-info-say-1 span {
   bottom: 5.5%;
@@ -166,6 +197,7 @@ body.fix {
 .bam-info-wrap .bam-info-say-2 {
   top: 7.25%;
   left: 68.5%;
+  animation: showup 1s 2s forwards;
 }
 .bam-info-wrap .bam-info-say-2 span {
   bottom: 3.5%;
@@ -177,14 +209,17 @@ body.fix {
   display: block;
   position: absolute;
   width: 33.5%;
+  opacity: 0;
 }
 .bam-info-wrap .bam-info-house-1 {
   top: 14.1%;
   left: 24.5%;
+  animation: showup 1s 1s forwards;
 }
 .bam-info-wrap .bam-info-house-2 {
   top: 8.2%;
   left: 49.6%;
+  animation: showup 1s 1.5s forwards;
 }
 .bam-info-wrap .bam-info-des {
   z-index: 1;
@@ -230,16 +265,38 @@ body.fix {
   top: 9%;
   left: 13.5%;
   width: 5.5%;
+  transform: translate(-20em, -9.5em);
+  animation: cargreen linear 7s infinite;
+}
+@keyframes cargreen {
+  to {
+    transform: translate(100em, 47.5em);
+  }
 }
 .bam-info-wrap .car-blue {
-  top: 14.65%;
+  z-index: 1;
+  top: 14.75%;
   left: 85%;
   width: 5%;
+  transform: translate(20em, -9.5em);
+  animation: carblue linear 7s 4s infinite;
+}
+@keyframes carblue {
+  to {
+    transform: translate(-100em, 47.5em);
+  }
 }
 .bam-info-wrap .car-red {
   top: 31.1%;
   left: 17.5%;
   width: 5.5%;
+  transform: translate(-24em, 11.35em);
+  animation: carred linear 7s 1.5s infinite;
+}
+@keyframes carred {
+  to {
+    transform: translate(100em, -47.5em);
+  }
 }
 .bam-info-wrap .info-stand {
   position: absolute;
@@ -279,6 +336,7 @@ body.fix {
   padding: 0.25em 0 0.5em 0;
 }
 .bam-info-wrap .info-block-video {
+  z-index: 1;
   position: absolute;
   width: 20%;
   top: 22.5%;
@@ -301,12 +359,15 @@ body.fix {
   width: 15%;
   top: 35%;
   left: 45%;
+  filter: drop-shadow(0 0.5em 0.25em rgba(0, 0, 0, 0.5));
 }
 .bam-info-wrap .info-a-block {
   display: block;
   position: absolute;
   width: 15.5%;
   transition: transform 0.5s;
+  opacity: 0;
+  animation: fadein 1s 1s forwards;
 }
 .bam-info-wrap .info-a-block > img {
   position: absolute;
@@ -430,7 +491,8 @@ body.fix {
   top: 88%;
 }
 .bam-info-wrap .bam-info-lightbox,
-.bam-info-wrap .bam-info-lightbox-popup {
+.bam-info-wrap .bam-info-lightbox-popup,
+.bam-info-wrap .bam-info-lightbox-youtube {
   display: none;
   z-index: 9;
   position: fixed;
@@ -518,6 +580,34 @@ body.fix {
   width: 22%;
   padding-top: 6.5%;
   border-radius: 10em;
+}
+.bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+.bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap .bam-info-lightbox-youtube-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  transform: translateY(-125%);
+  filter: brightness(0) invert(1);
+}
+.bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap .bam-info-yt-block {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap .bam-info-yt-block iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
 .bam-info-wrap [data-popup=blue-1] {
   top: 27.5%;
@@ -668,20 +758,33 @@ body.fix {
   .bam-info-wrap .kv-ppl:hover {
     transform: scale(1.1);
   }
-  .bam-info-wrap .bam-info-title-1:hover,
-  .bam-info-wrap .bam-info-title-2:hover,
-  .bam-info-wrap .bam-info-say-1:hover,
-  .bam-info-wrap .bam-info-say-2:hover,
+  .bam-info-wrap .bam-info-title-1:hover img,
+  .bam-info-wrap .bam-info-title-2:hover img {
+    transform: translateY(-0.5em) !important;
+  }
+  .bam-info-wrap .bam-info-say-1:hover > div,
+  .bam-info-wrap .bam-info-say-2:hover > div {
+    transform: translateY(-0.5em) !important;
+  }
   .bam-info-wrap .info-a-block:hover {
-    transform: translateY(-0.5em);
+    transform: translateY(-0.5em) !important;
   }
 }
 @media only screen and (max-width: 1024px) {
   .bam-info-wrap {
     font-size: 1.9vw;
   }
-  .bam-info-wrap .bam-info-short {
-    height: auto;
+  .bam-info-wrap .bam-info-short.main-1 {
+    height: 255em;
+  }
+  .bam-info-wrap .bam-info-short.main-1.active {
+    height: 255em;
+  }
+  .bam-info-wrap .bam-info-short.main-2 {
+    height: 295em;
+  }
+  .bam-info-wrap .bam-info-short.main-2.active {
+    height: 295em;
   }
   .bam-info-wrap .bam-info-short .bam-info-cut {
     display: none !important;
@@ -719,7 +822,7 @@ body.fix {
     left: 50%;
   }
   .bam-info-wrap .bam-info-say-1 span {
-    bottom: 3%;
+    bottom: 1%;
     left: 66%;
   }
   .bam-info-wrap .bam-info-say-2 {
@@ -727,7 +830,7 @@ body.fix {
     left: 66.5%;
   }
   .bam-info-wrap .bam-info-say-2 span {
-    bottom: 2.5%;
+    bottom: 1%;
     left: 66%;
   }
   .bam-info-wrap .bam-info-house-1,
@@ -784,6 +887,9 @@ body.fix {
   }
   .bam-info-wrap .info-a-block {
     width: 30%;
+  }
+  .bam-info-wrap .info-a-block h4 {
+    transform: translate(-50%, -120%);
   }
   .bam-info-wrap .info-a-title.small {
     width: 22%;
@@ -842,6 +948,12 @@ body.fix {
   }
   .bam-info-wrap .info-popup-block {
     width: 95%;
+  }
+  .bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap {
+    width: 95%;
+  }
+  .bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap .bam-info-lightbox-youtube-close {
+    width: 8%;
   }
   .bam-info-wrap [data-popup=blue-1] {
     top: 31.75%;

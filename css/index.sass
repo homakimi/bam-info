@@ -12,6 +12,14 @@ $brown: #bf7064
     background: #FFF
     overflow: hidden
 
+    @keyframes showup
+        to
+            opacity: 1
+            transform: translate(0)
+    @keyframes fadein
+        to
+            opacity: 1
+            
     .bam-info-cursor
         display: none
         z-index: 3
@@ -25,8 +33,13 @@ $brown: #bf7064
         position: relative
         height: 111em
         overflow: hidden
+        &.main-1
+            &.active
+                height: 190em
+        &.main-2
+            &.active
+                height: 220em
         &.active
-            height: auto
             .bam-info-cut
                 display: none! important
         .bam-info-cut
@@ -59,6 +72,9 @@ $brown: #bf7064
         top: 0
         left: 18%
         width: 32%
+        opacity: 0
+        transform: translateY(-100%)
+        animation: showup 1s forwards
         .kv-ppl
             position: absolute
             bottom: -12%
@@ -71,20 +87,29 @@ $brown: #bf7064
         position: absolute
         display: block
         width: 20%
+        opacity: 0
+        transform: translateY(25%)
         transition: transform 0.5s
+        img
+            transition: transform 0.5s
     .bam-info-title-1
         top: 7.8%
         left: 26%
+        animation: showup 1s 1.25s forwards
     .bam-info-title-2
         top: 2%
         left: 56.25%
+        animation: showup 1s 1.75s forwards
 
     .bam-info-say-1,
     .bam-info-say-2
         position: absolute
         display: block
         width: 14.5%
-        transition: transform 0.5s
+        opacity: 0
+        transform: translateY(25%)
+        > div
+            transition: transform 0.5s
         p
             position: absolute
             font-size: 0.9em
@@ -99,6 +124,7 @@ $brown: #bf7064
     .bam-info-say-1
         top: 13%
         left: 18%
+        animation: showup 1s 1.5s forwards
         span
             bottom: 5.5%
             left: 50%
@@ -106,6 +132,7 @@ $brown: #bf7064
     .bam-info-say-2
         top: 7.25%
         left: 68.5%
+        animation: showup 1s 2s forwards
         span
             bottom: 3.5%
             left: 65.5%
@@ -116,12 +143,15 @@ $brown: #bf7064
         display: block
         position: absolute
         width: 33.5%
+        opacity: 0
     .bam-info-house-1
         top: 14.1%
         left: 24.5%
+        animation: showup 1s 1s forwards
     .bam-info-house-2
         top: 8.2%
         left: 49.6%
+        animation: showup 1s 1.5s forwards
 
     .bam-info-des
         z-index: 1
@@ -163,14 +193,30 @@ $brown: #bf7064
         top: 9%
         left: 13.5%
         width: 5.5%
+        transform: translate(-20em, -9.5em)
+        animation: cargreen linear 7s infinite
+        @keyframes cargreen
+            to
+                transform: translate(100em, 47.5em)
     .car-blue
-        top: 14.65%
+        z-index: 1
+        top: 14.75%
         left: 85%
         width: 5%
+        transform: translate(20em, -9.5em)
+        animation: carblue linear 7s 4s infinite
+        @keyframes carblue
+            to
+                transform: translate(-100em, 47.5em)
     .car-red
         top: 31.1%
         left: 17.5%
         width: 5.5%
+        transform: translate(-24em, 11.35em)
+        animation: carred linear 7s 1.5s infinite
+        @keyframes carred
+            to
+                transform: translate(100em, -47.5em)
 
     .info-stand
         position: absolute
@@ -205,6 +251,7 @@ $brown: #bf7064
                 padding: 0.25em 0 0.5em 0
 
     .info-block-video
+        z-index: 1
         position: absolute
         width: 20%
         top: 22.5%
@@ -225,12 +272,15 @@ $brown: #bf7064
                 width: 15%
                 top: 35%
                 left: 45%
+                filter: drop-shadow(0 0.5em 0.25em rgba(#000, 0.5))
 
     .info-a-block
         display: block
         position: absolute
         width: 15.5%
         transition: transform 0.5s
+        opacity: 0
+        animation: fadein 1s 1s forwards
         > img
             position: absolute
             display: block
@@ -331,7 +381,8 @@ $brown: #bf7064
             top: 88%
 
     .bam-info-lightbox,
-    .bam-info-lightbox-popup
+    .bam-info-lightbox-popup,
+    .bam-info-lightbox-youtube
         display: none
         z-index: 9
         position: fixed
@@ -403,7 +454,31 @@ $brown: #bf7064
         width: 22%
         padding-top: 6.5%
         border-radius: 10em
-
+    .bam-info-lightbox-youtube
+        .bam-info-yt-wrap
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 70%
+            transform: translate(-50%, -50%)
+            .bam-info-lightbox-youtube-close
+                position: absolute
+                top: 0
+                right: 0
+                width: 5%
+                transform: translateY(-125%)
+                filter: brightness(0) invert(1)
+            .bam-info-yt-block
+                width: 100%
+                padding-top: 56.25%
+                overflow: hidden
+                iframe
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    width: 100%
+                    height: 100%
+                    transform: translate(-50%, -50%)
 
     // position
     [data-popup="blue-1"]
@@ -521,18 +596,31 @@ $brown: #bf7064
             &:hover
                 transform: scale(1.1)
         .bam-info-title-1,
-        .bam-info-title-2,
+        .bam-info-title-2
+            &:hover
+                img
+                    transform: translateY(-0.5em)! important
         .bam-info-say-1,
-        .bam-info-say-2,
+        .bam-info-say-2
+            &:hover
+                > div
+                    transform: translateY(-0.5em)! important
         .info-a-block
             &:hover
-                transform: translateY(-0.5em)
+                transform: translateY(-0.5em)! important
 
 @media only screen and (max-width: 1024px)
     .bam-info-wrap
         font-size: 1.9vw
         .bam-info-short
-            height: auto
+            &.main-1
+                height: 255em
+                &.active
+                    height: 255em
+            &.main-2
+                height: 295em
+                &.active
+                    height: 295em
             .bam-info-cut
                 display: none! important
 
@@ -563,13 +651,13 @@ $brown: #bf7064
             top: 17.75%
             left: 50%
             span
-                bottom: 3%
+                bottom: 1%
                 left: 66%
         .bam-info-say-2
             top: 8%
             left: 66.5%
             span
-                bottom: 2.5%
+                bottom: 1%
                 left: 66%
         .bam-info-house-1,
         .bam-info-house-2
@@ -617,6 +705,8 @@ $brown: #bf7064
 
         .info-a-block
             width: 30%
+            h4
+                transform: translate(-50%, -120%)
 
         .info-a-title
             &.small
@@ -666,6 +756,12 @@ $brown: #bf7064
         .info-popup-block
             width: 95%
             
+        .bam-info-lightbox-youtube
+            .bam-info-yt-wrap
+                width: 95%
+                .bam-info-lightbox-youtube-close
+                    width: 8%
+
         // position
         [data-popup="blue-1"]
             top: 31.75%
