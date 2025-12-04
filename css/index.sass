@@ -433,10 +433,13 @@ $brown: #bf7064
     .info-popup-block
         display: none
         position: absolute
-        width: 50%
+        height: 550px
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        img
+            display: block
+            height: 100%
     .bam-info-lightbox-popup-close
         position: absolute
         width: 7.5%
@@ -755,6 +758,11 @@ $brown: #bf7064
                 font-size: 1.5em
         .info-popup-block
             width: 95%
+            max-width: 500px
+            height: auto
+            img
+                width: 100%
+                height: auto
             
         .bam-info-lightbox-youtube
             .bam-info-yt-wrap

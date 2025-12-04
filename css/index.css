@@ -557,10 +557,14 @@ body.fix {
 .bam-info-wrap .info-popup-block {
   display: none;
   position: absolute;
-  width: 50%;
+  height: 550px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.bam-info-wrap .info-popup-block img {
+  display: block;
+  height: 100%;
 }
 .bam-info-wrap .bam-info-lightbox-popup-close {
   position: absolute;
@@ -948,6 +952,12 @@ body.fix {
   }
   .bam-info-wrap .info-popup-block {
     width: 95%;
+    max-width: 500px;
+    height: auto;
+  }
+  .bam-info-wrap .info-popup-block img {
+    width: 100%;
+    height: auto;
   }
   .bam-info-wrap .bam-info-lightbox-youtube .bam-info-yt-wrap {
     width: 95%;
