@@ -57,14 +57,10 @@ $(document)
         $(this).addClass('active');
         $('.bam-info-short').removeClass('active');
         $('.bam-info-short').removeClass('main-1 main-2').addClass('main-'+$(this).data('main'));
-        $('[data-cut], [data-main-target]').hide();
-        $('[data-cut="'+$(this).data('main')+'"], [data-main-target="'+$(this).data('main')+'"]').fadeIn();
+        $('[data-main-target]').hide();
+        $('[data-main-target="'+$(this).data('main')+'"]').fadeIn();
     }
     $('body, html').animate({ scrollTop: $('[data-main-target="'+$(this).data('main')+'"] .info-block-1 .info-stand').offset().top - window.innerHeight*0.25 }, 1000)
-})
-.on('click', '[data-cut]', function() {
-    $('.bam-info-short').addClass('active');
-    $('body, html').animate({ scrollTop: $('[data-main-target="'+$(this).data('cut')+'"] .info-block-3 .info-stand').offset().top - window.innerHeight*0.25 }, 1000)
 })
 .on('click', '[data-popup]', function() {
     $('.bam-info-lightbox-popup').fadeIn();

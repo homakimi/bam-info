@@ -31,33 +31,11 @@ $brown: #bf7064
 
     .bam-info-short
         position: relative
-        height: 111em
         overflow: hidden
         &.main-1
-            &.active
-                height: 190em
+            height: 190em
         &.main-2
-            &.active
-                height: 220em
-        &.active
-            .bam-info-cut
-                display: none! important
-        .bam-info-cut
-            display: block
-            z-index: 1
-            position: absolute
-            bottom: 0
-            left: 0
-            width: 100%
-            .info-stand
-                bottom: 20%
-                left: 64%
-                article
-                    background: #638edd
-        .bam-info-cut-pink
-            .info-stand
-                article
-                    background: #f95858
+            height: 220em
 
     .bam-info-bg
         position: relative
@@ -618,14 +596,8 @@ $brown: #bf7064
         .bam-info-short
             &.main-1
                 height: 255em
-                &.active
-                    height: 255em
             &.main-2
                 height: 295em
-                &.active
-                    height: 295em
-            .bam-info-cut
-                display: none! important
 
         .bam-info-bg
             padding-top: percentage(5856/1024)

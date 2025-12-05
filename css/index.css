@@ -80,35 +80,13 @@ body.fix {
 }
 .bam-info-wrap .bam-info-short {
   position: relative;
-  height: 111em;
   overflow: hidden;
 }
-.bam-info-wrap .bam-info-short.main-1.active {
+.bam-info-wrap .bam-info-short.main-1 {
   height: 190em;
 }
-.bam-info-wrap .bam-info-short.main-2.active {
+.bam-info-wrap .bam-info-short.main-2 {
   height: 220em;
-}
-.bam-info-wrap .bam-info-short.active .bam-info-cut {
-  display: none !important;
-}
-.bam-info-wrap .bam-info-short .bam-info-cut {
-  display: block;
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-.bam-info-wrap .bam-info-short .bam-info-cut .info-stand {
-  bottom: 20%;
-  left: 64%;
-}
-.bam-info-wrap .bam-info-short .bam-info-cut .info-stand article {
-  background: #638edd;
-}
-.bam-info-wrap .bam-info-short .bam-info-cut-pink .info-stand article {
-  background: #f95858;
 }
 .bam-info-wrap .bam-info-bg {
   position: relative;
@@ -781,17 +759,8 @@ body.fix {
   .bam-info-wrap .bam-info-short.main-1 {
     height: 255em;
   }
-  .bam-info-wrap .bam-info-short.main-1.active {
-    height: 255em;
-  }
   .bam-info-wrap .bam-info-short.main-2 {
     height: 295em;
-  }
-  .bam-info-wrap .bam-info-short.main-2.active {
-    height: 295em;
-  }
-  .bam-info-wrap .bam-info-short .bam-info-cut {
-    display: none !important;
   }
   .bam-info-wrap .bam-info-bg {
     padding-top: 571.875%;
